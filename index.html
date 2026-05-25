@@ -57,19 +57,21 @@
             display: flex;
             justify-content: space-between;
         }
+        /* 更新：支援多圖並排的圖片容器 */
         .image-container {
             height: 220px;
             background-color: #cbd5e1;
             position: relative;
             overflow: hidden;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            gap: 2px; /* 多張圖片之間的間距 */
         }
         .image-container img {
+            flex: 1; /* 讓圖片平均分配容器寬度 */
             width: 100%;
             height: 100%;
             object-fit: cover;
+            min-width: 0; /* 防止 flex item 溢出 */
         }
         .image-caption {
             background-color: #f1f5f9;
@@ -134,7 +136,8 @@
         <div class="grid-item">
             <div class="shot-header"><span>Shot 02</span><span>場景一</span></div>
             <div class="image-container">
-                <img src="2.jpeg" alt="中景：教官指揮交通">
+                <img src="1.jpg" alt="中景：教官指揮交通 1">
+                <img src="2.jpeg" alt="中景：教官指揮交通 2">
             </div>
             <div class="image-caption">中景：教官指揮交通</div>
             <div class="details">
@@ -160,7 +163,7 @@
         <div class="grid-item">
             <div class="shot-header"><span>Shot 04</span><span>場景二</span></div>
             <div class="image-container">
-                <img src="4.jpg" alt="近景：阿凱催油門">
+                <img src="5.jpeg" alt="近景：阿凱催油門">
             </div>
             <div class="image-caption">近景：阿凱催油門</div>
             <div class="details">
@@ -173,7 +176,7 @@
         <div class="grid-item">
             <div class="shot-header"><span>Shot 06</span><span>場景二</span></div>
             <div class="image-container">
-                <img src="6.jpeg" alt="低視角：阿喵走向車道">
+                <img src="7.jpeg" alt="低視角：阿喵走向車道">
             </div>
             <div class="image-caption">低視角：阿喵走向車道</div>
             <div class="details">
@@ -186,7 +189,8 @@
         <div class="grid-item">
             <div class="shot-header"><span>Shot 08</span><span>場景二</span></div>
             <div class="image-container">
-                <img src="7.jpeg" alt="廣角：阿凱驚見急煞">
+                <img src="5.jpeg" alt="廣角：阿凱驚見急煞 1">
+                <img src="8.jpg" alt="廣角：阿凱驚見急煞 2">
             </div>
             <div class="image-caption">廣角：阿凱驚見急煞</div>
             <div class="details">
@@ -199,7 +203,8 @@
         <div class="grid-item">
             <div class="shot-header"><span>Shot 11</span><span>場景三</span></div>
             <div class="image-container">
-                <img src="8.jpg" alt="大特寫：阿凱冒冷汗">
+                <img src="5.jpeg" alt="大特寫：阿凱冒冷汗 1">
+                <img src="9.jpg" alt="大特寫：阿凱冒冷汗 2">
             </div>
             <div class="image-caption">大特寫：阿凱冒冷汗</div>
             <div class="details">
@@ -212,7 +217,9 @@
         <div class="grid-item">
             <div class="shot-header"><span>Shot 13/14</span><span>場景四</span></div>
             <div class="image-container">
-                <img src="9.jpg" alt="跟拍：兩位教官提醒">
+                <img src="2.jpeg" alt="跟拍：兩位教官提醒 1">
+                <img src="6.jpeg" alt="跟拍：兩位教官提醒 2">
+                <img src="9.jpg" alt="跟拍：兩位教官提醒 3">
             </div>
             <div class="image-caption">跟拍：兩位教官提醒</div>
             <div class="details">
@@ -225,7 +232,8 @@
         <div class="grid-item">
             <div class="shot-header"><span>Shot 18/19</span><span>場景五</span></div>
             <div class="image-container">
-                <img src="1.jpg" alt="特寫：阿喵曬太陽與字卡">
+                <img src="7.jpeg" alt="特寫：阿喵曬太陽與字卡 1">
+                <img src="8.jpg" alt="特寫：阿喵曬太陽與字卡 2">
             </div>
             <div class="image-caption">特寫：阿喵曬太陽與字卡</div>
             <div class="details">
